@@ -1,0 +1,16 @@
+
+# accept coordinates from user
+x = float(input("Enter X coordinate: "))
+y = float(input("Enter Y coordinate: "))
+
+# check conditions for quadrant
+if x > 0 and y > 0:
+    print("Point lies in Quadrant 1")
+elif x < 0 and y > 0:
+    print("Point lies in Quadrant 2")
+elif x < 0 and y < 0:
+    print("Point lies in Quadrant 3")
+elif x > 0 and y < 0:
+    print("Point lies in Quadrant 4")
+else:
+    print("Point lies on Axis")

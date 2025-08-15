@@ -1,0 +1,17 @@
+# accept number from user
+num = int(input("Enter a number: "))
+
+# store original number for display
+temp = num
+
+# variable to store sum
+sum_digits = 0
+
+# loop to extract digits and calculate sum
+while num > 0:
+    digit = num % 10      # get last digit
+    sum_digits = sum_digits + digit  # add to sum
+    num = num // 10       # remove last digit
+
+# display result
+print("Sum of digits of", temp, "=", sum_digits)

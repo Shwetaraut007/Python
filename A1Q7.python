@@ -1,0 +1,16 @@
+num = input("Enter a number: ")
+even = odd = zero = 0
+
+for digit in num:
+    if digit.isdigit():
+        d = int(digit)
+        if d == 0:
+            zero += 1
+        elif d % 2 == 0:
+            even += 1
+        else:
+            odd += 1
+
+print("Even digits:", even)
+print("Odd digits:", odd)
+print("Zero digits:",zero)

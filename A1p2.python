@@ -1,0 +1,18 @@
+# accept basic salary from user
+basic = float(input("Enter Annual Basic Salary: "))
+
+# apply tax rules
+if basic < 250000:
+    tax_rate = 0
+elif basic <= 500000:
+    tax_rate = 10
+else:
+    tax_rate = 20
+
+# calculate tax amount
+tax_amount = (tax_rate / 100) * basic
+
+# display results
+print("Basic Salary :", basic)
+print("Tax Rate     :", tax_rate, "%")
+print("Tax Amount   :", tax_amount)

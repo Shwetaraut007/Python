@@ -1,0 +1,6 @@
+# Calculate X=a^b
+a = int(input("Enter value of a: "))
+b = int(input("Enter value of b: "))
+
+x = a ** b
+print("X =",x)

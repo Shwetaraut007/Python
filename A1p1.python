@@ -1,0 +1,18 @@
+# accept amount from user
+amt = int(input("Enter amount to withdraw: "))
+
+# calculate number of 10 rupee notes
+ten = amt // 10
+amt = amt % 10
+
+# calculate number of 5 rupee notes
+five = amt // 5
+amt = amt % 5
+
+# remaining will be 1 rupee notes
+one = amt
+
+# display results
+print("10 rupee notes =", ten)
+print("5 rupee notes  =", five)
+print("1 rupee notes  =", one)
