@@ -1,0 +1,14 @@
+# Create a list
+my_list = []
+
+# Accept elements from user
+n = int(input("Enter number of elements: "))
+for i in range(n):
+    element = input(f"Enter element {i+1}: ")
+    my_list.append(element)
+
+# Display original list
+print("Original list:", my_list)
+
+# Display list in reverse order
+print("List in reverse order:",my_list[::-1])

@@ -1,0 +1,9 @@
+def change_char(s):
+    first_char = s[0]
+    # replace all occurrences of first char except the first one
+    return first_char + s[1:].replace(first_char, '$')
+
+# Sample input
+string = "restart"
+result = change_char(string)
+print(result)

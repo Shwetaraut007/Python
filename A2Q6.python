@@ -1,0 +1,12 @@
+def first_last_two(s):
+    if len(s) < 2:
+        return ""
+    elif len(s) == 2:
+        return s + s
+    else:
+        return s[:2] + s[-2:]
+
+# Sample inputs
+print(first_last_two("General12"))  # Expected: Ge12
+print(first_last_two("Ka"))         # Expected: KaKa
+print(first_last_two("K"))          # Expected: ""

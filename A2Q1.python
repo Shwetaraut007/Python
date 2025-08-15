@@ -1,0 +1,11 @@
+# Accept 5 integer values from user
+nums = []
+for i in range(5):
+    val = int(input(f"Enter integer {i+1}: "))
+    nums.append(val)
+
+# Check duplicates
+if len(nums) != len(set(nums)):
+    print("Duplicate")
+else:
+    print("All UNIQUE")

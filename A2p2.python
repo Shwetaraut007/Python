@@ -1,0 +1,8 @@
+# Accept string from user
+text = input("Enter a string: ")
+
+# Display alternate characters from left to right
+print("Alternate characters (Left to Right):", text[::2])
+
+# Display alternate characters from right to left
+print("Alternate characters (Right to Left):",text[::-2])

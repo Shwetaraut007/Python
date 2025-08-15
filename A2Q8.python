@@ -1,0 +1,14 @@
+def word_count(sentence):
+    # शब्दांची यादी बनवणे
+    words = sentence.split()
+    # प्रत्येक शब्दाची मोजणी ठेवण्यासाठी dictionary
+    count = {}
+    for word in words:
+        word = word.lower()  # case-insensitive मोजणीसाठी
+        count[word] = count.get(word, 0) + 1
+    return count
+
+# Sample input
+sentence = "This is a test This test is simple"
+result = word_count(sentence)
+print(result)

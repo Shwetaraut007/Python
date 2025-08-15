@@ -1,0 +1,15 @@
+# Sample string
+string = "google.com"
+
+# Create empty dictionary for frequency
+freq = {}
+
+# Count frequency of each character
+for char in string:
+    if char in freq:
+        freq[char] += 1
+    else:
+        freq[char] = 1
+
+# Display result
+print(freq)

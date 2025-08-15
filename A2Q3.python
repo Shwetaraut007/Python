@@ -1,0 +1,11 @@
+# Accept string from user
+string = input("Enter a string: ")
+
+# Remove odd index characters
+result = ""
+for i in range(len(string)):
+    if i % 2 == 0:  # Even index ठेवा
+        result += string[i]
+
+# Display result
+print("String after removing odd index characters:",result)

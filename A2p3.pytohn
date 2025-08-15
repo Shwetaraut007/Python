@@ -1,0 +1,16 @@
+# Accept string from user
+text = input("Enter a string: ").lower()
+
+vowels = "aeiou"
+v_count = 0
+c_count = 0
+
+for ch in text:
+    if ch.isalpha():  # फक्त अक्षरांसाठी
+        if ch in vowels:
+            v_count += 1
+        else:
+            c_count += 1
+
+print("Vowels:", v_count)
+print("Consonants:", c_count)
