@@ -1,0 +1,25 @@
+# Program to count even digits, zero digits, and odd digits in a given number
+
+num = int(input("Enter a number: "))
+num_abs = abs(num)  
+
+even_count = 0
+odd_count = 0
+zero_count = 0
+
+if num_abs == 0:
+    zero_count = 1
+else:
+    while num_abs > 0:
+        digit = num_abs % 10
+        if digit == 0:
+            zero_count += 1
+        elif digit % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+        num_abs //= 10
+
+print("Total even digits =", even_count)
+print("Total odd digits  =", odd_count)
+print("Total zero digits =", zero_count)

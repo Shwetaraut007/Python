@@ -1,0 +1,8 @@
+# Program to calculate x raised to y
+
+x = int(input("Enter base (x): "))
+y = int(input("Enter exponent (y): "))
+
+result = x ** y
+
+print(x, "raised to the power", y, "=", result)

@@ -1,0 +1,18 @@
+# Program to calculate minimum number of 10, 5, and 1 denomination currency notes
+
+amount = int(input("Enter the amount to be given: "))
+
+
+note_10 = amount // 10
+remaining = amount % 10
+
+note_5 = remaining // 5
+remaining = remaining % 5
+
+note_1 = remaining  
+
+
+print("Currency notes to be given:")
+print("10 rupee notes =", note_10)
+print("5 rupee notes  =", note_5)
+print("1 rupee notes  =", note_1)
