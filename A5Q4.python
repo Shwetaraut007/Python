@@ -1,0 +1,23 @@
+class ComplexNumber:
+    def __init__(self, real, imag):
+        self.real = real
+        self.imag = imag
+
+    def __add__(self, other):
+        if isinstance(other, ComplexNumber):
+            return ComplexNumber(self.real + other.real, self.imag + other.imag)
+        return NotImplemented
+
+    def __str__(self):
+      
+        sign = '+' if self.imag >= 0 else '-'
+        return f"{self.real} {sign} {abs(self.imag)}i"
+
+if __name__ == "__main__":
+    num1 = ComplexNumber(3, 4)
+    num2 = ComplexNumber(5, -2)
+    result = num1 + num2
+
+    print("First Complex Number:", num1)
+    print("Second Complex Number:", num2)
+    print("Addition Result:", result)

@@ -1,0 +1,25 @@
+from itertools import chain, combinations
+
+class SubsetGenerator:
+    def __init__(self):
+        self.numbers = []
+
+    def set_values(self):
+        raw_input = input("Enter distinct integers separated by spaces: ")
+        self.numbers = list(map(int, raw_input.strip().split()))
+        self.numbers = list(set(self.numbers))  
+
+    def get_subsets(self):
+
+        return list(chain.from_iterable(combinations(self.numbers, r) for r in range(len(self.numbers)+1)))
+
+    def display_subsets(self):
+        subsets = self.get_subsets()
+        print(f"\nAll possible subsets ({len(subsets)} total):")
+        for subset in subsets:
+            print(list(subset))
+
+if __name__ == "__main__":
+    sg = SubsetGenerator()
+    sg.set_values()
+    sg.display_subsets()

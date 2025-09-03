@@ -1,0 +1,6 @@
+numbers = range(1, 11)
+
+squared_list = [(num, num**2) for num in numbers]
+
+print("List of (number, square) tuples:")
+print(squared_list)

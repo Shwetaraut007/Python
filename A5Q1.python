@@ -1,0 +1,70 @@
+class Studen:
+    def __init__(self, roll_no, name, marks1, marks2, marks3):
+        self.roll_no = roll_no
+        self.name = name
+        self.marks1 = marks1
+        self.marks2 = marks2
+        self.marks3 = marks3
+        self.percentage = self.calculate_percentage()
+
+    def calculate_percentage(self):
+        total = self.marks1 + self.marks2 + self.marks3
+        return total / 3
+
+    def display(self):
+        print(f"Roll No: {self.roll_no}")
+        print(f"Name: {self.name}")
+        print(f"Marks: {self.marks1}, {self.marks2}, {self.marks3}")
+        print(f"Percentage: {self.percentage:.2f}%")
+        print("-" * 30)
+
+students = []
+
+
+def add_student():
+    roll_no = input("Enter Roll No: ")
+    name = input("Enter Name: ")
+    marks1 = float(input("Enter Marks for Subject 1: "))
+    marks2 = float(input("Enter Marks for Subject 2: "))
+    marks3 = float(input("Enter Marks for Subject 3: "))
+    student = Studen(roll_no, name, marks1, marks2, marks3)
+    students.append(student)
+    print("Student added successfully!\n")
+
+
+def delete_student():
+    roll_no = input("Enter Roll No to delete: ")
+    for student in students:
+        if student.roll_no == roll_no:
+            students.remove(student)
+            print("Student record deleted.\n")
+            return
+    print("Student not found.\n")
+
+
+def display_students():
+    if not students:
+        print("No student records found.\n")
+        return
+    print("\n--- Student Details ---")
+    for student in students:
+        student.display()
+
+while True:
+    print("1. Add Student")
+    print("2. Delete Student")
+    print("3. Display All Students")
+    print("4. Exit")
+    choice = input("Enter your choice (1-4): ")
+
+    if choice == '1':
+        add_student()
+    elif choice == '2':
+        delete_student()
+    elif choice == '3':
+        display_students()
+    elif choice == '4':
+        print("Exiting program.")
+        break
+    else:
+        print("Invalid choice. Please try again.\n")

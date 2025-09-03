@@ -1,0 +1,11 @@
+my_tuple = (10, 20, 30, 40, 50, 60, 70, 80)
+
+if len(my_tuple) >= 4:
+    fourth_from_front = my_tuple[3]      
+    fourth_from_end = my_tuple[-4]
+
+    print("Tuple:", my_tuple)
+    print("4th element from front:", fourth_from_front)
+    print("4th element from end:", fourth_from_end)
+else:
+    print("The tuple has fewer than 4 elements.")

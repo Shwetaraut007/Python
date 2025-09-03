@@ -1,0 +1,22 @@
+class RepeatString:
+    def __init__(self, text=""):
+        self.text = text
+
+    def get_input(self):
+        self.text = input("Enter a string: ")
+        self.n = int(input("Enter the number of repetitions: "))
+
+    def __mul__(self, other):
+        if isinstance(other, int):
+            return self.text * other
+        return NotImplemented
+
+    def __rmul__(self, other):
+        return self.__mul__(other)
+
+if __name__ == "__main__":
+    rs = RepeatString()
+    rs.get_input()
+
+    result = rs * rs.n
+    print(f"\nRepeated string: {result}")

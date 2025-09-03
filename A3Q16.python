@@ -1,0 +1,13 @@
+dict1 = {'a': 100, 'b': 200, 'c': 300}
+dict2 = {'b': 150, 'c': 50, 'd': 400}
+
+combined_dict = dict1.copy()  
+
+for key, value in dict2.items():
+    if key in combined_dict:
+        combined_dict[key] += value  
+    else:
+        combined_dict[key] = value   
+
+print("Combined Dictionary (values added for common keys):")
+print(combined_dict)

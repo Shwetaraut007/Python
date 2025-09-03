@@ -1,0 +1,10 @@
+my_set = {"apple", "banana", "cherry", "date"}
+
+print("Original Set:", my_set)
+
+print("\nIterating over the set:")
+for item in my_set:
+    print(item)
+
+
+

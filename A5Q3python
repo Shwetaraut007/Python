@@ -1,0 +1,21 @@
+class StringProcessor:
+    def __init__(self):
+        self.user_string = ""
+
+    def get_string(self):
+        self.user_string = input("Enter a string: ")
+
+    def print_string(self):
+        print("Uppercase:", self.user_string.upper())
+
+    def reverse_and_print(self):
+        
+        reversed_string = ' '.join(reversed(self.user_string.split()))
+        print("Reversed (word by word) in lowercase:", reversed_string.lower())
+
+
+if __name__ == "__main__":
+    processor = StringProcessor()
+    processor.get_string()
+    processor.print_string()
+    processor.reverse_and_print()

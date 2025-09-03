@@ -1,0 +1,8 @@
+num_set = {12, 45, 7, 89, 23, 56}
+
+print("Set:", num_set)
+
+print("Maximum value in the set:", max(num_set))
+print("Minimum value in the set:", min(num_set))
+
+

@@ -1,0 +1,46 @@
+import math
+
+def cylinder_area(radius, height):
+    # Surface Area = 2πr² + 2πrh
+    return 2 * math.pi * radius**2 + 2 * math.pi * radius * height
+
+def cylinder_volume(radius, height):
+    # Volume = πr²h
+    return math.pi * radius**2 * height
+
+def cuboid_area(length, width, height):
+    # Surface Area = 2(lw + lh + wh)
+    return 2 * (length * width + length * height + width * height)
+
+def cuboid_volume(length, width, height):
+    # Volume = l × w × h
+    return length * width * height
+
+def main():
+    print("Choose shape to calculate:")
+    print("1. Cylinder")
+    print("2. Cuboid")
+    choice = input("Enter choice (1 or 2): ")
+
+    if choice == '1':
+        r = float(input("Enter radius of cylinder: "))
+        h = float(input("Enter height of cylinder: "))
+        area = cylinder_area(r, h)
+        volume = cylinder_volume(r, h)
+        print(f"Cylinder Surface Area: {area:.2f}")
+        print(f"Cylinder Volume: {volume:.2f}")
+
+    elif choice == '2':
+        l = float(input("Enter length of cuboid: "))
+        w = float(input("Enter width of cuboid: "))
+        h = float(input("Enter height of cuboid: "))
+        area = cuboid_area(l, w, h)
+        volume = cuboid_volume(l, w, h)
+        print(f"Cuboid Surface Area: {area:.2f}")
+        print(f"Cuboid Volume: {volume:.2f}")
+
+    else:
+        print("Invalid choice!")
+
+if __name__ == "__main__":
+    main()

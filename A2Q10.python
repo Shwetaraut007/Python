@@ -1,0 +1,16 @@
+def count_repeated_characters(s):
+    char_count = {}
+
+    for char in s:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+
+    print("Repeated characters:")
+    for char, count in char_count.items():
+        if count > 1:
+            print(f"'{char}' appears {count} times.")
+
+input_str = input("Enter a string: ")
+count_repeated_characters(input_str)

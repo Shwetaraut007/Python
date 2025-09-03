@@ -1,0 +1,12 @@
+my_dict = {
+    1: "apple",
+    2: "banana"
+}
+
+print("Original Dictionary:", my_dict)
+
+my_dict[3] = "cherry"
+
+print("Updated Dictionary:", my_dict)
+
+

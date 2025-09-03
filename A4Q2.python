@@ -1,0 +1,10 @@
+def solve_linear_equation(a, b):
+    if a == 0:
+        return "No solution" if b != 0 else "Infinite solutions"
+    x = -b / a
+    return x
+
+a = float(input("Enter coefficient a: "))
+b = float(input("Enter coefficient b: "))
+result = solve_linear_equation(a, b)
+print("Value of X:", result)

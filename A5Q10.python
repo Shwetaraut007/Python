@@ -1,0 +1,9 @@
+import datetime
+
+now = datetime.datetime.now()
+
+print("Current Date and Time:", now)
+
+day_of_week = now.strftime("%A")
+
+print("Day of the Week:", day_of_week)

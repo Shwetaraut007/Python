@@ -1,0 +1,8 @@
+my_set = {"apple", "banana", "cherry", "mango"}
+
+print("Set:", my_set)
+
+length = len(my_set)
+print("Length of the set:", length)
+
+

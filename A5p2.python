@@ -1,0 +1,27 @@
+class Studen:
+
+    student_count = 0
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+        Studen.student_count += 1
+
+    def display_info(self):
+        print("Student Name:", self.name)
+        print("Student Age:", self.age)
+
+    @classmethod
+    def total_students(cls):
+        print("Total number of students:", cls.student_count)
+
+student1 = Studen("om", 20)
+student2 = Studen("sai", 22)
+student3 = Studen("ram", 19)
+
+student1.display_info()
+student2.display_info()
+student3.display_info()
+
+Studen.total_students()

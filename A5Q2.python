@@ -1,0 +1,24 @@
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+
+class Circle:
+    def __init__(self, center, radius):
+        self.center = center 
+        self.radius = radius
+
+    def display(self):
+        print("Circle Details:")
+        print(f"Center: ({self.center.x}, {self.center.y})")
+        print(f"Radius: {self.radius}")
+
+x = float(input("Enter x-coordinate of the center: "))
+y = float(input("Enter y-coordinate of the center: "))
+radius = float(input("Enter the radius of the circle: "))
+
+center_point = Point(x, y)
+circle = Circle(center_point, radius)
+
+circle.display()

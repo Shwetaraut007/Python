@@ -1,0 +1,18 @@
+my_dict = {
+    'apple': 50,
+    'banana': 20,
+    'cherry': 75,
+    'date': 40
+}
+
+sorted_asc = dict(sorted(my_dict.items(), key=lambda item: item[1]))
+
+
+sorted_desc = dict(sorted(my_dict.items(), key=lambda item: item[1], reverse=True))
+
+print("Original dictionary:", my_dict)
+print("Sorted by value (ascending):", sorted_asc)
+print("Sorted by value (descending):", sorted_desc)
+
+
+

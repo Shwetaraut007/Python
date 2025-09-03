@@ -1,0 +1,6 @@
+original_set = {10, 20, 30, 40}
+
+copied_set = original_set.copy()
+
+print("Original Set:", original_set)
+print("Shallow Copied Set:", copied_set)

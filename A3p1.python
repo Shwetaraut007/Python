@@ -1,0 +1,8 @@
+numbers = {1, 2, 3}
+print("Original set:", numbers)
+
+numbers.add(4)
+print("After adding 4:", numbers)
+
+numbers.remove(2)
+print("After removing 2:", numbers)

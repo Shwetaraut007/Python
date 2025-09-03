@@ -1,0 +1,8 @@
+def generate_even_numbers(n):
+    for num in range(0, n + 1, 2):  
+        yield num
+
+n = int(input("Enter the value of n: "))
+print(f"Even numbers up to {n}:")
+for even in generate_even_numbers(n):
+    print(even, end=" ")
