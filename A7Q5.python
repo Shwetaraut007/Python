@@ -1,0 +1,32 @@
+with open("test.txt", "w") as f:
+    f.write("10\n")
+    f.write("3.14\n")
+    f.write("hello\n")
+    f.write("-25\n")
+    f.write("7.5e2\n")
+    f.write("A\n")
+
+def check_type(value):
+    try:
+        num = int(value)
+        print(f"{value} -> Integer")
+    except ValueError:
+        try:
+            num = float(value)
+            print(f"{value} -> Float")
+        except ValueError:
+            print(f"{value} -> Character/String")
+
+try:
+    with open("test.txt", "r") as f:
+        lines = f.readlines()
+
+    for line in lines:
+        value = line.strip()  
+        if value:  
+            check_type(value)
+
+except FileNotFoundError:
+    print("Error: test.txt file not found!")
+except Exception as e:
+    print("Some error occurred:", e)

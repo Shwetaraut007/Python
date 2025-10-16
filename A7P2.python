@@ -1,0 +1,8 @@
+try:
+    num = int(input("Enter a positive integer: "))
+    if num > 0:
+        print("Correct! You entered a positive integer:", num)
+    else:
+        print("Incorrect input! Number is not positive.")
+except ValueError:
+    print("Invalid input! Please enter an integer only.")

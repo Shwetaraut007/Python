@@ -1,0 +1,26 @@
+class InvalidDateException(Exception):
+    pass
+
+class Date:
+    def __init__(self, d, m, y):
+        if not (1 <= d <= 31):
+            raise InvalidDateException("Invalid Day! 1-31 allowed.")
+        if not (1 <= m <= 12):
+            raise InvalidDateException("Invalid Month! 1-12 allowed.")
+        if y < 1:
+            raise InvalidDateException("Invalid Year! Must be positive.")
+        self.day, self.month, self.year = d, m, y
+
+    def display(self):
+        print(f"Date: {self.day:02d}/{self.month:02d}/{self.year}")
+
+try:
+    d = int(input("Enter day: "))
+    m = int(input("Enter month: "))
+    y = int(input("Enter year: "))
+    obj = Date(d, m, y)
+    obj.display()
+except ValueError:
+    print("Please enter numbers only!")
+except InvalidDateException as e:
+    print("Error:", e)

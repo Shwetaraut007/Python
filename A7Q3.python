@@ -1,0 +1,23 @@
+class MyError(Exception):
+    def __init__(self, message, data):
+        self.message = message
+        self.data = data
+        super().__init__(self.message)
+
+    def __str__(self):
+        return f"MyError: {self.message}, Extra Data: {self.data}"
+
+def oops():
+    raise MyError("This is a custom error!", 404)
+
+def catcher():
+    try:
+        oops()
+    except IndexError as e:
+        print("Caught IndexError:", e)
+    except MyError as e:
+        print("Caught MyError:", e)
+        print("Extra data passed:", e.data)
+
+if __name__ == "__main__":
+    catcher()

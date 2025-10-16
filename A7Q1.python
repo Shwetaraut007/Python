@@ -1,0 +1,11 @@
+class MyException(Exception):
+    def __init__(self, message):
+        self.message = message
+    
+    def __str__(self):
+        return f"MyException: {self.message}"
+
+try:
+    raise MyException("This is a custom error message.")
+except MyException as e:
+    print(e)
