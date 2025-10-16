@@ -1,0 +1,16 @@
+import tkinter as tk
+
+window = tk.Tk()
+window.title("Listbox Example")
+
+listbox = tk.Listbox(window)
+
+listbox.insert(1, "Apple")
+listbox.insert(2, "Banana")
+listbox.insert(3, "Cherry")
+listbox.insert(4, "Mango")
+listbox.insert(5, "Orange")
+
+listbox.pack(pady=20)
+
+window.mainloop()

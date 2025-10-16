@@ -1,0 +1,11 @@
+import tkinter as tk
+
+window = tk.Tk()
+window.title("Checkbutton Example")
+
+agree_var = tk.IntVar()
+
+check_btn = tk.Checkbutton(window, text="I agree", variable=agree_var)
+check_btn.pack(pady=20)
+
+window.mainloop()

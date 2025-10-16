@@ -1,0 +1,29 @@
+import tkinter as tk
+from tkinter import font
+
+def update_font():
+    weight = "bold" if bold_var.get() else "normal"
+    slant = "italic" if italic_var.get() else "roman"
+    underline = 1 if underline_var.get() else 0
+
+    custom_font.config(weight=weight, slant=slant, underline=underline)
+    label.config(font=custom_font)
+
+win = tk.Tk()
+win.title("Font Style Example")
+win.geometry("400x200")
+
+custom_font = font.Font(family="Helvetica", size=20)
+
+label = tk.Label(win, text="Hello Tkinter!", font=custom_font)
+label.pack(pady=20)
+
+bold_var = tk.IntVar()
+italic_var = tk.IntVar()
+underline_var = tk.IntVar()
+
+tk.Checkbutton(win, text="Bold", variable=bold_var, command=update_font).pack(anchor='w')
+tk.Checkbutton(win, text="Italic", variable=italic_var, command=update_font).pack(anchor='w')
+tk.Checkbutton(win, text="Underline", variable=underline_var, command=update_font).pack(anchor='w')
+
+win.mainloop()

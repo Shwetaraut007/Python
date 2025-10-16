@@ -1,0 +1,23 @@
+from tkinter import *
+from datetime import date, datetime
+
+def calc_age():
+    try:
+        bdate = datetime.strptime(entry.get(), "%d/%m/%Y").date()
+        today = date.today()
+        age = today.year - bdate.year - ((today.month, today.day) < (bdate.month, bdate.day))
+        result.config(text=f"Your Age: {age}")
+    except:
+        result.config(text="Invalid Date! (Use DD/MM/YYYY)")
+
+root = Tk()
+root.title("Age Calculator")
+root.geometry("300x150")
+
+Label(root, text="Enter Birthdate (DD/MM/YYYY):").pack(pady=5)
+entry = Entry(root); entry.pack()
+
+Button(root, text="Calculate Age", command=calc_age).pack(pady=5)
+result = Label(root, text=""); result.pack()
+
+root.mainloop()

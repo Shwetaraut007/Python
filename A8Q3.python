@@ -1,0 +1,13 @@
+import tkinter as tk
+from tkinter import font
+
+window = tk.Tk()
+window.title("Label Font Example")
+window.geometry("400x200")
+
+custom_font = font.Font(family="Helvetica", size=20, weight="bold")
+
+label = tk.Label(window, text="Hello Tkinter!", font=custom_font)
+label.pack(pady=50)
+
+window.mainloop()

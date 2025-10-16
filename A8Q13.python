@@ -1,0 +1,45 @@
+import tkinter as tk
+
+def add_item():
+    item = entry.get()
+    if item:
+        listbox.insert(tk.END, item)
+        entry.delete(0, tk.END)
+
+def print_item():
+    selected = listbox.curselection()
+    if selected:
+        item = listbox.get(selected)
+        result.config(text=f"Selected: {item[0]}")
+    else:
+        result.config(text="No item selected")
+
+def delete_item():
+    selected = listbox.curselection()
+    for i in selected[::-1]: 
+        listbox.delete(i)
+    result.config(text="Item(s) deleted")
+
+win = tk.Tk()
+win.title("Listbox Example")
+win.geometry("400x300")
+
+tk.Label(win, text="Enter Item:").pack(pady=5)
+entry = tk.Entry(win)
+entry.pack(pady=5)
+
+tk.Button(win, text="Add Item", command=add_item).pack(pady=5)
+
+listbox = tk.Listbox(win, selectmode=tk.SINGLE, width=30)
+listbox.pack(pady=10)
+
+btn_frame = tk.Frame(win)
+btn_frame.pack(pady=5)
+
+tk.Button(btn_frame, text="Print Selected", command=print_item).grid(row=0, column=0, padx=5)
+tk.Button(btn_frame, text="Delete Selected", command=delete_item).grid(row=0, column=1, padx=5)
+
+result = tk.Label(win, text="")
+result.pack(pady=10)
+
+win.mainloop()

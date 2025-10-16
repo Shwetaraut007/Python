@@ -1,0 +1,20 @@
+import tkinter as tk
+
+def change_bg(color):
+    win.config(bg=color)
+
+win = tk.Tk()
+win.title("Change Background Color")
+win.geometry("400x300")
+
+menu_bar = tk.Menu(win)
+win.config(menu=menu_bar)
+
+color_menu = tk.Menu(menu_bar, tearoff=0)
+menu_bar.add_cascade(label="Colors", menu=color_menu)
+
+colors = ["Red", "Green", "Blue", "Yellow", "Pink", "Orange"]
+for c in colors:
+    color_menu.add_command(label=c, command=lambda col=c.lower(): change_bg(col))
+
+win.mainloop()

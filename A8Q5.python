@@ -1,0 +1,33 @@
+import tkinter as tk
+from tkinter import messagebox
+import math
+
+def calculate():
+    try:
+        r = float(entry_radius.get())
+        h = float(entry_height.get())
+
+        surface_area = 2 * math.pi * r * (r + h)
+        volume = math.pi * r**2 * h
+
+        messagebox.showinfo("Result",
+                            f"Surface Area = {surface_area:.2f}\nVolume = {volume:.2f}")
+    except ValueError:
+        messagebox.showerror("Error", "Please enter valid numbers!")
+
+window = tk.Tk()
+window.title("Cylinder Calculator")
+window.geometry("350x200")
+
+tk.Label(window, text="Enter Radius:").pack(pady=5)
+entry_radius = tk.Entry(window)
+entry_radius.pack(pady=5)
+
+tk.Label(window, text="Enter Height:").pack(pady=5)
+entry_height = tk.Entry(window)
+entry_height.pack(pady=5)
+
+btn = tk.Button(window, text="Calculate", command=calculate)
+btn.pack(pady=10)
+
+window.mainloop()

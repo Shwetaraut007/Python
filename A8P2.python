@@ -1,0 +1,19 @@
+import tkinter as tk   
+from tkinter import messagebox
+
+window = tk.Tk()
+window.title("Two Buttons Example")
+
+def say_hello():
+    messagebox.showinfo("Message", "Hello!")
+
+def exit_app():
+    window.destroy()
+
+hello_button = tk.Button(window, text="Hello", command=say_hello)
+exit_button = tk.Button(window, text="Exit", command=exit_app)
+
+hello_button.pack(pady=10)
+exit_button.pack(pady=10)
+
+window.mainloop()
