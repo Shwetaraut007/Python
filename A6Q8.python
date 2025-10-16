@@ -1,0 +1,19 @@
+class Parent1:
+    def greet(self):
+        print("Hello from Parent1")
+
+class Parent2:
+    def greet(self):
+        print("Hello from Parent2")
+
+class Child(Parent1, Parent2):
+    def greet(self):
+        print("Hello from Child")
+        
+        super().greet()
+
+if __name__ == "__main__":
+    c = Child()
+    c.greet()
+
+    print("\nMRO of Child class:", [cls.__name__ for cls in Child.__mro__])

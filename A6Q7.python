@@ -1,0 +1,43 @@
+class StringHandler:
+    def __init__(self):
+        self.text = ""
+
+    def get_string(self):
+        self.text = input("Enter a string: ")
+
+    def print_string(self):
+        print("You entered:", self.text)
+
+class Country:
+    def __init__(self, country_name, nationality):
+        self.country_name = country_name
+        self.nationality = nationality
+
+    def printNationality(self):
+        print("Nationality:", self.nationality)
+
+
+class State(Country):
+    def __init__(self, country_name, nationality, state_name):
+        super().__init__(country_name, nationality)
+        self.state_name = state_name
+
+    def printState(self):
+        print("State:", self.state_name)
+
+    def printStateCountryNationality(self):
+        print(f"State: {self.state_name}")
+        print(f"Country: {self.country_name}")
+        print(f"Nationality: {self.nationality}")
+
+
+if __name__ == "__main__":
+    sh = StringHandler()
+    sh.get_string()
+    sh.print_string()
+
+    state_obj = State("India", "Indian", "Maharashtra")
+    state_obj.printState()
+    state_obj.printNationality()
+    print()
+    state_obj.printStateCountryNationality()

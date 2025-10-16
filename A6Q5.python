@@ -1,0 +1,25 @@
+class Area:
+    def __init__(self):
+        pass
+
+class Square(Area):
+    def __init__(self, side):
+        self.side = side
+
+    def find_area(self):
+        return self.side * self.side
+
+class Triangle(Area):
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+    def find_area(self):
+        return 0.5 * self.base * self.height
+
+if __name__ == "__main__":
+    sq = Square(5)
+    tr = Triangle(10, 6)
+
+    print(f"Area of Square: {sq.find_area()}")
+    print(f"Area of Triangle: {tr.find_area()}")

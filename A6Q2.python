@@ -1,0 +1,31 @@
+class TeamMember:
+    def __init__(self, name, role):
+        self.name = name
+        self.role = role
+
+    def member_info(self):
+        print(f"Name: {self.name}")
+        print(f"Role: {self.role}")
+
+class LeaderSkills:
+    def __init__(self, leadership_experience):
+        self.leadership_experience = leadership_experience  
+
+    def show_leadership_skills(self):
+        print(f"Leadership experience: {self.leadership_experience} years")
+
+class TeamLeader(TeamMember, LeaderSkills):
+    def __init__(self, name, role, leadership_experience, team_size):
+       
+        TeamMember.__init__(self, name, role)
+        LeaderSkills.__init__(self, leadership_experience)
+        self.team_size = team_size
+
+    def leader_info(self):
+        self.member_info()
+        self.show_leadership_skills()
+        print(f"Manages a team of: {self.team_size} members")
+
+if __name__ == "__main__":
+    leader = TeamLeader("OM RAUT", "Team Leader", 5, 10)
+    leader.leader_info()

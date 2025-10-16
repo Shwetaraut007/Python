@@ -1,0 +1,25 @@
+class Animal:
+    pass
+
+class Dog(Animal):
+    pass
+
+class Car:
+    pass
+
+if __name__ == "__main__":
+
+    print("Is Dog subclass of Animal?", issubclass(Dog, Animal))  
+    print("Is Animal subclass of Dog?", issubclass(Animal, Dog))  
+    print("Is Dog subclass of object?", issubclass(Dog, object))  
+    print("Is Car subclass of Animal?", issubclass(Car, Animal))  
+
+    dog_instance = Dog()
+    animal_instance = Animal()
+    car_instance = Car()
+
+    print("\nIs dog_instance an instance of Dog?", isinstance(dog_instance, Dog))  # True
+    print("Is dog_instance an instance of Animal?", isinstance(dog_instance, Animal))  # True
+    print("Is animal_instance an instance of Dog?", isinstance(animal_instance, Dog))  # False
+    print("Is car_instance an instance of Animal?", isinstance(car_instance, Animal))  # False
+    print("Is car_instance an instance of object?", isinstance(car_instance, object))  # True

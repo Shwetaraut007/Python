@@ -1,0 +1,28 @@
+class Team:
+    def __init__(self, team_name):
+        self.team_name = team_name
+
+    def info(self):
+        print(f"Team: {self.team_name}")
+
+class Dev(Team):
+    def __init__(self, team_name, dev_count):
+        super().__init__(team_name)
+        self.dev_count = dev_count
+
+    def info(self):
+        super().info()
+        print(f"Number of Developers: {self.dev_count}")
+
+class Developer(Dev):
+    def __init__(self, team_name, dev_count, developer_name):
+        super().__init__(team_name, dev_count)
+        self.developer_name = developer_name
+
+    def info(self):
+        super().info()
+        print(f"Developer Name: {self.developer_name}")
+
+if __name__ == "__main__":
+    dev_member = Developer("Backend Team", 5, "Alice")
+    dev_member.info()

@@ -1,0 +1,54 @@
+class University:
+    def accept_university(self):
+        self.univ_id = input("Enter University ID: ")
+        self.univ_name = input("Enter University Name: ")
+
+    def display_university(self):
+        print("\n--- University Details ---")
+        print("University ID:", self.univ_id)
+        print("University Name:", self.univ_name)
+
+class College(University):
+    def accept_college(self):
+        self.college_id = input("Enter College ID: ")
+        self.college_name = input("Enter College Name: ")
+
+    def display_college(self):
+        print("\n--- College Details ---")
+        print("College ID:", self.college_id)
+        print("College Name:", self.college_name)
+
+class Department(University):
+    def accept_department(self):
+        self.dept_id = input("Enter Department ID: ")
+        self.dept_name = input("Enter Department Name: ")
+
+    def display_department(self):
+        print("\n--- Department Details ---")
+        print("Department ID:", self.dept_id)
+        print("Department Name:", self.dept_name)
+
+
+# Hybrid Inheritance (inherits both College and Department)
+class Course(College, Department):
+    def accept_course(self):
+        self.course_id = input("Enter Course ID: ")
+        self.course_name = input("Enter Course Name: ")
+
+    def display_course(self):
+        print("\n--- Course Details ---")
+        print("Course ID:", self.course_id)
+        print("Course Name:", self.course_name)
+
+
+if __name__ == "__main__":
+    c = Course()
+    c.accept_university()
+    c.accept_college()
+    c.accept_department()
+    c.accept_course()
+
+    c.display_university()
+    c.display_college()
+    c.display_department()
+    c.display_course()

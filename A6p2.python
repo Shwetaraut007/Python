@@ -1,0 +1,10 @@
+class Parent:
+    def info(self):
+        print("This is the Parent class.")
+
+class Child(Parent):
+    pass  
+
+if __name__ == "__main__":
+    obj = Child()
+    obj.info()  
